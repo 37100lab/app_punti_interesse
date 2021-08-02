@@ -19,3 +19,6 @@ In risposta al nostro messaggio il sistema invia istantaneamente il nome della f
 # credits
 
 Lavoro sviluppato da Innovalìtion Lab in collaborazione con Comune di Verona.
+
+![loghi](https://user-images.githubusercontent.com/58253642/127861558-293e62bb-fa83-4d1e-8824-53cface3e46c.jpg)
+
