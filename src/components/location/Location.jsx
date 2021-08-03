@@ -13,7 +13,11 @@ export const Location = ({ location, showLocationModal }) => {
   return (
     <div>
       <h3>{stringManager.titleCase(location.properties.nome)}</h3> 
-    </div>
+    
+      {location.properties.descrizion &&
+      <h4>{stringManager.titleCase(location.properties.descrizion)}</h4>  
+      }
+      </div>
   )
 }
 
