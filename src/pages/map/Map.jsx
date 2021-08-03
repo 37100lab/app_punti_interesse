@@ -46,7 +46,7 @@ export class Map extends Component {
   
   state = {
     mapContainer: false,
-    farmacie:{},
+    puntiDiInteresse:{},
     quartieri:{},
     circoscrizioni: {},
     center:[45.438351, 10.99171],
@@ -57,7 +57,7 @@ export class Map extends Component {
 
     const res = await Geolocation.getCurrentPosition()
     this.center=[res.coords.latitude, res.coords.longitude]
-    this.GetFarmacie()
+    this.GetPuntiDiInteresse()
     if (this.state.mapContainer) return
 
     setTimeout(() => {
@@ -65,8 +65,8 @@ export class Map extends Component {
     }, 500)
   }
 
-  GetFarmacie(){
-    fetch(url+'/get/farmacie', {
+  GetPuntiDiInteresse(){
+    fetch(url+'/get/puntiDiInteresse', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ export class Map extends Component {
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
-      this.setState({farmacie : data})
+      this.setState({puntiDiInteresse : data})
     })
     .catch((error) => {
       console.error('Error:', error);
@@ -83,10 +83,6 @@ export class Map extends Component {
   }
 
   //ON EACH METHODS
-  OnEachFarmacia = (farmacia, layer) =>{
-    layer.bindPopup(farmacia.properties.denominazi)
-  }
-
   OnEachQuartiere = (quartiere, layer) =>{
     layer.bindPopup(stringManager.titleCase(quartiere.properties.quartiere))
   }
@@ -157,7 +153,7 @@ export class Map extends Component {
               <Marker position={this.center}>
                 <Popup>Tu sei qui</Popup>
               </Marker>
-              <LocationMarkers myloc={this.state.farmacie.features}/>
+              <LocationMarkers myloc={this.state.puntiDiInteresse.features}/>
             </MapContainer>
           )}
 
@@ -170,7 +166,7 @@ export class Map extends Component {
 
         <IonFooter>
             <IonImg src={sponsor}
-            style={{maxWidth: "400px"}}
+            style={{maxWidth: "500px", margin:"auto"}}
             />
         </IonFooter>
       </IonPage>

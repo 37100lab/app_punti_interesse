@@ -15,6 +15,7 @@ const locationConfig = {
   },
 }
 
+// not yet icon custom 
 export const LocationList = ({ myloc }) => {
 
   return (
@@ -25,7 +26,6 @@ export const LocationList = ({ myloc }) => {
           <Marker
             key={loc.id}
             position={[loc.geometry.coordinates[1], loc.geometry.coordinates[0]]}
-            icon={locationConfig["farmacia"].icon}
           >
             <Popup>
               <Location location={loc}/>

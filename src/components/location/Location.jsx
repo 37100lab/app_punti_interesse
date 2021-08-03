@@ -9,13 +9,10 @@ import stringManager from '../../utility/stringManager'
 
 export const Location = ({ location, showLocationModal }) => {
 
+  //no modal 'cause no informations to display
   return (
     <div>
-      <h3>{stringManager.titleCase(location.properties.denominazi)}</h3> 
-      
-      <IonButton expand="block" fill="clear" color="transparent" onClick={() => showLocationModal({locationClicked:location})}>
-        Info
-      </IonButton> 
+      <h3>{stringManager.titleCase(location.properties.nome)}</h3> 
     </div>
   )
 }
