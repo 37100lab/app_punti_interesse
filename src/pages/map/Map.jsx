@@ -106,7 +106,6 @@ try{
   render() {
     const { zoom, locationClicked, showModal } = this.props.map
     const centerPosition = () => {
-      console.log(this.center)
       if(this.center)
         this.state.mapCont.flyTo(this.center)
       if(typeof this.center==='undefined')
@@ -121,13 +120,12 @@ try{
             </IonToolbar>
             </IonHeader>
             <IonContent>
-
             <IonList>
             <IonItem>
-            <IonLabel>Errore nell'avvio dell'applicazione</IonLabel>
+            <IonLabel className="ion-text-wrap">Errore nell'avvio dell'applicazione</IonLabel>
             </IonItem>
             <IonItem>
-            <IonLabel>Assicurarsi che il Geolocalizzazione 
+            <IonLabel className="ion-text-wrap">Assicurarsi che il Geolocalizzazione 
             e la connessione internet siano attive</IonLabel>
             </IonItem>
             </IonList>
