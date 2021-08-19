@@ -1,9 +1,6 @@
 import React from 'react'
 
 import { connect } from 'react-redux'
-import{
-IonButton,
-} from '@ionic/react'
 import { showLocationModal } from '../../redux/actions'
 import stringManager from '../../utility/stringManager'
 
