@@ -1,6 +1,6 @@
 {
-  "appId": "com.geoapp.front",
-  "appName": "geoapp-front",
+  "appId": "com.geo.interesse",
+  "appName": "geo-interesse",
   "webDir": "build",
   "bundledWebRuntime": false
 }

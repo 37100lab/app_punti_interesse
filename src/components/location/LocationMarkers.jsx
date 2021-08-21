@@ -15,9 +15,8 @@ const locationConfig = {
   },
 }
 
-// not yet icon custom 
+// not yet icon custom
 export const LocationList = ({ myloc }) => {
-
   return (
     <div>
       {myloc &&
@@ -25,19 +24,19 @@ export const LocationList = ({ myloc }) => {
         myloc.map(loc => (
           <Marker
             key={loc.id}
-            position={[loc.geometry.coordinates[1], loc.geometry.coordinates[0]]}
-             icon={locationConfig["poi"].icon}
+            position={[
+              loc.geometry.coordinates[1],
+              loc.geometry.coordinates[0],
+            ]}
+            icon={locationConfig['poi'].icon}
           >
             <Popup>
-              <Location location={loc}/>
+              <Location location={loc} />
             </Popup>
-           
           </Marker>
         ))}
     </div>
   )
 }
-
-
 
 export default LocationList
