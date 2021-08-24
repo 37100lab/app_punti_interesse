@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">geo-interesse</string>
+    <string name="title_activity_main">geo-interesse</string>
+    <string name="package_name">com.geo.interesse</string>
+    <string name="custom_url_scheme">com.geo.interesse</string>
+</resources>
