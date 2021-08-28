@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { Marker, Popup, useMap } from 'react-leaflet'
+import MarkerClusterGroup from 'react-leaflet-markercluster'
 import _ from 'lodash'
 import L from 'leaflet'
 import poi from '../assets/icons/locations/poi.svg'
@@ -24,7 +25,7 @@ const FeatureList = ({ fetchFeatures, features }) => {
   }
 
   return (
-    <div>
+    <MarkerClusterGroup>
       {features.length > 0 &&
         features.map(feature => (
           <Marker
@@ -38,7 +39,7 @@ const FeatureList = ({ fetchFeatures, features }) => {
             </Popup>
           </Marker>
         ))}
-    </div>
+    </MarkerClusterGroup>
   )
 }
 
